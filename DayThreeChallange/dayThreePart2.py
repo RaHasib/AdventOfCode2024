@@ -3,11 +3,11 @@ import re
 with open("input.txt", "r") as file:
     corrupted_memory = file.read()
 
-pattern = r"mul\((\d{1,3}),(\d{1,3})\)" #Grouping
+pattern = r"mul\((\d{1,3}),(\d{1,3})\)"
 control_pattern = r"(do\(\)|don't\(\))"
 
 all_matches = re.findall(f"{control_pattern}|{pattern}",corrupted_memory)
-# print(all_matches)
+
 
 result_sum = 0
 mul_enabled = True
